@@ -26,7 +26,7 @@ from utils.scheduler import create_early_stopping
 
 
 # Path to the directory where your DICOM images are stored
-image_dir = "data/train"
+image_dir = "/kaggle/input/siim-isic-melanoma-classification/train"
 
 # Load CSV data
 train_df = pd.read_csv("new_train.csv")
