@@ -332,40 +332,40 @@ def watershed_segmentation_black_white(gray_image):
     return black_white_image
 
 
-# Example usage
-dicom_file_path = "data/train/ISIC_0052212.dcm"
-original_image = load_dicom_image(dicom_file_path)
-gray_sclaed = dicom_to_gray_scale(original_image)
-hair_removed = hair_remove(image=original_image, grayScale=gray_sclaed)
-enhanced_image = apply_ahe(hair_removed)
-denoised = apply_filter_dicom(enhanced_image, filter_type="nlm")
-edges_detected = apply_canny_edge_detection(denoised, 100, 200)
-segmented = watershed_segmentation(denoised)
+# # Example usage
+# dicom_file_path = "data/train/ISIC_0052212.dcm"
+# original_image = load_dicom_image(dicom_file_path)
+# gray_sclaed = dicom_to_gray_scale(original_image)
+# hair_removed = hair_remove(image=original_image, grayScale=gray_sclaed)
+# enhanced_image = apply_ahe(hair_removed)
+# denoised = apply_filter_dicom(enhanced_image, filter_type="nlm")
+# edges_detected = apply_canny_edge_detection(denoised, 100, 200)
+# segmented = watershed_segmentation(denoised)
 
-# Plotting the original and enhanced images
-plt.figure(figsize=(10, 5))
+# # Plotting the original and enhanced images
+# plt.figure(figsize=(10, 5))
 
-# Original image
-plt.subplot(2, 2, 1)
-plt.imshow(gray_sclaed, cmap="gray")
-plt.title("Gray scaled DICOM Image")
-plt.axis("off")
+# # Original image
+# plt.subplot(2, 2, 1)
+# plt.imshow(gray_sclaed, cmap="gray")
+# plt.title("Gray scaled DICOM Image")
+# plt.axis("off")
 
-# Enhanced image
-plt.subplot(2, 2, 2)
-plt.imshow(enhanced_image, cmap="gray")
-plt.title("weighted addition enhanced Image")
-plt.axis("off")
+# # Enhanced image
+# plt.subplot(2, 2, 2)
+# plt.imshow(enhanced_image, cmap="gray")
+# plt.title("weighted addition enhanced Image")
+# plt.axis("off")
 
-plt.subplot(2, 2, 3)
-plt.imshow(denoised, cmap="gray")
-plt.title("Denoised Image")
-plt.axis("off")
+# plt.subplot(2, 2, 3)
+# plt.imshow(denoised, cmap="gray")
+# plt.title("Denoised Image")
+# plt.axis("off")
 
-plt.subplot(2, 2, 4)
-plt.imshow(segmented, cmap="gray")
-plt.title("Segamented Image")
-plt.axis("off")
+# plt.subplot(2, 2, 4)
+# plt.imshow(segmented, cmap="gray")
+# plt.title("Segamented Image")
+# plt.axis("off")
 
 
-plt.show()
+# plt.show()

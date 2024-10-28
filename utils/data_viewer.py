@@ -1,6 +1,6 @@
 import pydicom
 import matplotlib.pyplot as plt
-from preprocessing import apply_filter_dicom
+from utils.preprocessing_lesion_images import apply_filter_dicom
 
 # Load the DICOM file
 dcm_file_path = "data/train/ISIC_0015719.dcm"
