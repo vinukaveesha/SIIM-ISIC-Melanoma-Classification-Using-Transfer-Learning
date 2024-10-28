@@ -31,6 +31,7 @@ class CustomModel:
         return {"total_loss": total_loss, "vgg_loss": vgg_loss, "efficientnet_loss": efficientnet_loss}
 
     def compile_and_train(self, x_train, y_train, x_val, y_val, epochs=15, batch_size=1):
+        print("Compiling model...")
         for epoch in range(epochs):
             print(f"Epoch {epoch+1}/{epochs}")
             for i in range(0, len(x_train), batch_size):
