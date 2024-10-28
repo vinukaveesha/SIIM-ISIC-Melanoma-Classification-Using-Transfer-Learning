@@ -24,6 +24,13 @@ from models.CustomEfficientNetB7 import Customefficientnetb7
 
 from utils.scheduler import create_early_stopping
 
+from utils.preprocessing_training_tabula import MelanomaDataset
+
+
+directory = "data"
+dataset = MelanomaDataset(directory)
+dataset.process_and_save()
+
 
 # Path to the directory where your DICOM images are stored
 image_dir = "/kaggle/input/siim-isic-melanoma-classification/train"

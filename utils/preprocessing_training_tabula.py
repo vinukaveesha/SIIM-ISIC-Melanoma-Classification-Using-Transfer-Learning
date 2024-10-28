@@ -162,9 +162,3 @@ class MelanomaDataset:
         plt.tight_layout()
         plt.savefig(f"{plots_directory}/diagnosis_split_by_target.png")
         plt.close()
-
-
-# Usage example:
-directory = "data"
-dataset = MelanomaDataset(directory)
-dataset.process_and_save()
