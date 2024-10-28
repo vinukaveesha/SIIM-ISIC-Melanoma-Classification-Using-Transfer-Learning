@@ -27,7 +27,7 @@ from utils.scheduler import create_early_stopping
 from utils.preprocessing_training_tabula import MelanomaDataset
 
 
-directory = "data"
+directory = "/kaggle/input/siim-isic-melanoma-classification/train.csv"
 dataset = MelanomaDataset(directory)
 dataset.process_and_save()
 
